@@ -1,0 +1,90 @@
+/*
+-----DESKTOP---------------
+*/
+
+@media only screen and (min-width: 1025px){
+
+	.contenido{
+
+		column-count:2;
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		
+	}
+}
+
+
+/*
+-----TABLETS---------------
+*/
+@media only screen and (min-width:768px) and (max-width: 1024px)  {
+	.contenido{
+
+		column-count:1;
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+
+	}
+	.variable{
+		height: auto;
+		display: block;
+	}
+}
+
+
+/*
+-----MOBILE HORIZONTAL---------------
+*/
+@media only screen and (min-width: 321px) and (max-width: 767px){
+	.contenido{
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
+		column-count:1;
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		
+	}
+
+
+	.variable{
+		height: auto;
+		display: block;
+
+	}
+
+	.contenido-indicadores{
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
+	}
+
+}
+
+/*
+-----MOBILE VERTICAL---------------
+*/
+@media only screen and (max-width: 320px){
+	.contenido{
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
+		column-count:1;
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		
+	}
+	.variable{
+		height: auto;
+		display: block;
+		min-height: 300px;
+	}
+
+	.contenido-indicadores{
+		margin-right: 0;
+		margin-left: 0;
+		margin-top: 75px;
+		width: 100%;
+	}
+}
+

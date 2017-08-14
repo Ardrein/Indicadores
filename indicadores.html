@@ -1,0 +1,42 @@
+<div class="contenido-indicadores">
+
+	<div ng-repeat="indicador in varsc.indicadores" class="indicador">
+
+		<div class="indic-cabecera">
+			<span>
+				<b>INDICATOR: </b>{{indicador.Name}}
+				<br>
+				<b>Type: </b>{{indicador['Data type']}}
+				<br>
+				<b>Value: </b>{{indicador.Formula | formato:2:indicador['Data type']}}
+			</span>
+		</div>
+		<div class="indic-descripcion">
+			<b>Description: </b>{{indicador['Long Name']}}
+		</div>
+		<div class="indic-formula">
+			<b>Formula: </b>{{indicador.Formula2}}
+		</div>
+		<div class="indic-variables">
+			<header>VARIABLES</header>
+			<div ng-repeat="variable in indicador.variables" class="variable">
+
+				<div class="var-cabecera">
+					<span>
+						<b>Variable: </b>{{variable.Name}}
+						<br>
+						<b>Type: </b>{{variable['Data type']}}
+					</span>
+				</div>
+				<div class="var-descripcion">
+					<b>Description: </b>{{variable['Long name']}}
+				</div>
+				<div class="var-valor">
+					<b>Value: </b>{{variable['Value']}}
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
