@@ -17,26 +17,32 @@
 		<div class="indic-formula">
 			<b>Formula: </b>{{indicador.Formula2}}
 		</div>
-		<div class="indic-variables">
-			<header>VARIABLES</header>
-			<div ng-repeat="variable in indicador.variables" class="variable">
-
-				<div class="var-cabecera">
-					<span>
-						<b>Variable: </b>{{variable.Name}}
-						<br>
-						<b>Type: </b>{{variable['Data type']}}
-					</span>
-				</div>
-				<div class="var-descripcion">
-					<b>Description: </b>{{variable['Long name']}}
-				</div>
-				<div class="var-valor">
-					<b>Value: </b>{{variable['Value']}}
-				</div>
-
-			</div>
-		</div>
-
+		<div class="indic-chart">
+			<b>Chart: </b>
+			<canvas id="doughnut" class="chart chart-doughnut"
+			chart-data="indicador.values" chart-labels="indicador.labels">
+		</canvas> 
 	</div>
+	<div class="indic-variables">
+		<header>VARIABLES</header>
+		<div ng-repeat="variable in indicador.variables" class="variable">
+
+			<div class="var-cabecera">
+				<span>
+					<b>Variable: </b>{{variable.Name}}
+					<br>
+					<b>Type: </b>{{variable['Data type']}}
+				</span>
+			</div>
+			<div class="var-descripcion">
+				<b>Description: </b>{{variable['Long name']}}
+			</div>
+			<div class="var-valor">
+				<b>Value: </b>{{variable['Value']}}
+			</div>
+
+		</div>
+	</div>
+
+</div>
 </div>

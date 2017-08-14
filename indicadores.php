@@ -18,8 +18,7 @@ $indicadores=$lecturaDocumento->asignarVariables();
 
 for($i = 0; $i<count($indicadores); $i++){
 	foreach($variables as $variable){
-		$indicadores[$i]['Formula'] = preg_replace('/\b'.$variable['Name'].'\b/u',$variable['Value'],$indicadores[$i]['Formula']);
-		
+		$indicadores[$i]['Formula'] = preg_replace('/\b'.$variable['Name'].'\b/u',$variable['Value'],$indicadores[$i]['Formula']);		
 	}
 	$indicadores[$i]['Formula'] = '=('.$indicadores[$i]['Formula'].')';
 	$indicadores[$i]['Formula']= $lecturaDocumento->calcularFormula($indicadores[$i]['Formula'] );

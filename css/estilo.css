@@ -120,6 +120,7 @@ html, body{
 	margin-bottom: 4%;
 	border: 1px solid #335c16;
 	box-shadow: 10px 10px 5px #1c3c19;
+	display: inline-block;
 }
 
 .indicador .variable{
@@ -143,7 +144,11 @@ html, body{
 }
 
 .indic-formula{
+	
+}
 
+.indic-chart{
+	width: 70%;
 }
 
 .indic-variables{

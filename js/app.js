@@ -1,5 +1,5 @@
 //declaracion del modulo indicatorsApp
-var indicatorsApp = angular.module('indicatorsApp', ['ngRoute']);
+var indicatorsApp = angular.module('indicatorsApp', ['ngRoute','chart.js']);
 
 //directiva
 indicatorsApp.directive('lista', function($timeout){
@@ -79,6 +79,7 @@ indicatorsApp.controller('VariablesController',['$scope','$http','$location',fun
     }).then(function successCallback(response){
       if(angular.fromJson(response).status == '200'){
        viewModel.indicadores = angular.fromJson(response).data;
+
        //console.log(response.data);
        $location.path('indicadores');
      }

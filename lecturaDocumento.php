@@ -110,6 +110,8 @@ class lecturaDocumento{
 					//$variable['Name'].'(\W)|(\W)'.$variable['Name'].'$/',$this->indicadores[$i]['Formula'])){
 				if(preg_match('/\b'.$variable['Name'].'\b/u',$this->indicadores[$i]['Formula'])){
 					$this->indicadores[$i]['variables'][] = $variable;
+					$this->indicadores[$i]['labels'][] = $variable['Name'];
+					$this->indicadores[$i]['values'][] = $variable['Value'];
 				}
 			}
 		}
